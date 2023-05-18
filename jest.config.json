@@ -1,0 +1,13 @@
+{
+  "collectCoverage": true,
+  "coverageDirectory": "reports/jest-coverage",
+  "modulePaths": ["<rootDir>/src/"],
+  "moduleFileExtensions": ["ts", "js", "tsx"],
+  "coveragePathIgnorePatterns": ["<rootDir>/node_modules/"],
+  "reporters": ["default", "jest-junit"],
+  "transform": {
+    "^.+\\.(ts|tsx)$": "esbuild-runner/jest"
+  },
+  "testMatch": ["**/*spec.(ts|tsx)"],
+  "testEnvironment": "node"
+}

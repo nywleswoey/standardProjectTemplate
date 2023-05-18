@@ -1,0 +1,56 @@
+{
+  "name": "@selwynyeow/standardprojecttemplate",
+  "version": "1.0.0",
+  "description": "Typical template for my projects, configured with typescript, jest, eslint, prettier and husky.",
+  "author": {
+    "name": "Selwyn Yeow",
+    "email": "sgfjords@gmail.com",
+    "url": "https://github.com/nywleswoey"
+  },
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ignore-path=.gitignore --ext .js,.ts,.tsx . --fix",
+    "format": "prettier --ignore-path .gitignore \"**/*.+(js|json)\" --write",
+    "lint-staged": "lint-staged --no-stash",
+    "test": "jest --passWithNoTests --config jest.config.json --"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "jest-junit": {
+    "suiteName": "",
+    "outputDirectory": "reports",
+    "outputName": "test-report.xml"
+  },
+  "keywords": [
+    "typescript",
+    "node",
+    "jest",
+    "eslint",
+    "prettier",
+    "husky",
+    "lintstaged"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.1",
+    "@types/node": "^20.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.6",
+    "@typescript-eslint/parser": "^5.59.6",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "jest": "^29.5.0",
+    "jest-junit": "^16.0.0",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}
